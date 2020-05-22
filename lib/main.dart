@@ -37,17 +37,17 @@ class MyApp extends StatelessWidget {
           body: new TabBarView(
             children: choices.map((Choice choice) {
               if (choice.key == '0') {
-                new Padding(
+              return  new Padding(
                   padding: const EdgeInsets.all(16.0),
-                  child: new ChoiceCard(choice: choice),
+                  child: new Text('首页'),
                 );
               } else if (choice.key == '1') {
-                new Padding(
+               return new Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: new RandomWords(),
                 );
               } else if (choice.key == '2') {
-                new Padding(
+              return  new Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: new ListPage(),
                 );
@@ -73,24 +73,24 @@ const List<Choice> choices = const <Choice>[
   const Choice(key: '2', title: '路由demo', icon: Icons.directions_boat),
 ];
 
-class ChoiceCard extends StatelessWidget {
-  const ChoiceCard({Key key, this.choice}) : super(key: key);
-  final Choice choice;
-  @override
-  Widget build(BuildContext context) {
-    final TextStyle textStyle = Theme.of(context).textTheme.display1;
-    return new Card(
-      color: Colors.white,
-      child: new Center(
-        child: new Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            new Icon(choice.icon, size: 128.0, color: textStyle.color),
-            new Text(choice.title, style: textStyle),
-          ],
-        ),
-      ),
-    );
-  }
-}
+// class ChoiceCard extends StatelessWidget {
+//   const ChoiceCard({Key key, this.choice}) : super(key: key);
+//   final Choice choice;
+//   @override
+//   Widget build(BuildContext context) {
+//     final TextStyle textStyle = Theme.of(context).textTheme.display1;
+//     return new Card(
+//       color: Colors.white,
+//       child: new Center(
+//         child: new Column(
+//           mainAxisSize: MainAxisSize.min,
+//           crossAxisAlignment: CrossAxisAlignment.center,
+//           children: <Widget>[
+//             new Icon(choice.icon, size: 128.0, color: textStyle.color),
+//             new Text(choice.title, style: textStyle),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }

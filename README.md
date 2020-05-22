@@ -17,4 +17,4 @@ samples, guidance on mobile development, and a full API reference.
 
 
 强制关闭安卓模拟器
-adb emu kill# flutter-demo
+adb emu kill
